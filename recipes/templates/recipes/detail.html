@@ -1,8 +1,17 @@
 <h1>{{ recipe.name }}</h1>
 <p>Category: {{ recipe.category.name }}</p>
 <p>{{ recipe.description }}</p>
+<br>
+<p>Ingredients</p>
 <ul>
     {% for ingredient in ingredients %}
         <li>{{ ingredient.name }}</li>
     {% endfor %}
 </ul>
+<br>
+<p>Directions</p>
+<ol>
+    {% for direction in directions %}
+        <li>{{ direction.direction }}</li>
+    {% endfor %}
+</ol>

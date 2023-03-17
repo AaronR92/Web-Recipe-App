@@ -35,7 +35,7 @@ class Direction(models.Model):
 
 class Ingredient(models.Model):
     name = models.CharField(max_length=100)
-    recipe = models.ForeignKey(Recipe, models.PROTECT, default=None)
+    recipe = models.ForeignKey(Recipe, models.PROTECT, default=None, related_name='ingredients')
 
     def __str__(self) -> str:
         return self.name
